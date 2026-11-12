@@ -1,0 +1,94 @@
+import json
+import struct
+import unittest
+import zlib
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def read_json(path):
+    return json.loads(path.read_text(encoding='utf-8'))
+
+
+def dimensions(path):
+    data = path.read_bytes()
+    assert data[:8] == b'\x89PNG\r\n\x1a\n'
+    return struct.unpack('>II', data[16:24])
+
+
+class ResourcePackTest(unittest.TestCase):
+    def test_editor_marker_font_and_masks(self):
+        pack = ROOT / 'editor-markers/resourcepack'
+        meta = read_json(pack / 'pack.mcmeta')['pack']
+        self.assertEqual([84, 0], meta['min_format'])
+        self.assertEqual(meta['min_format'], meta['max_format'])
+        provider, = read_json(pack / 'assets/javarailways/font/editor_markers.json')['providers']
+        self.assertEqual(('bitmap', 8, 7, ['\ue100\ue101\ue102']), (provider['type'], provider['height'], provider['ascent'], provider['chars']))
+        namespace, name = provider['file'].split(':')
+        png = (pack / 'assets' / namespace / 'textures' / name).read_bytes()
+        self.assertEqual((48, 16), struct.unpack('>II', png[16:24]))
+        offset = 8
+        chunks = []
+        while offset < len(png):
+            size = struct.unpack_from('>I', png, offset)[0]
+            kind = png[offset + 4:offset + 8]
+            data = png[offset + 8:offset + 8 + size]
+            self.assertEqual(zlib.crc32(kind + data), struct.unpack_from('>I', png, offset + 8 + size)[0])
+            if kind == b'IHDR':
+                self.assertEqual((8, 6, 0, 0, 0), tuple(data[8:13]))
+            if kind == b'IDAT': chunks.append(data)
+            offset += 12 + size
+        raw = zlib.decompress(b''.join(chunks))
+        rows = []
+        for y in range(16):
+            row = raw[y * 193:(y + 1) * 193]
+            self.assertEqual(0, row[0])
+            rows.append(row[1:])
+        for glyph in range(3):
+            pixels = [rows[y][(glyph * 16 + x) * 4:(glyph * 16 + x + 1) * 4] for y in range(16) for x in range(16)]
+            self.assertTrue(any(p[3] for p in pixels))
+            self.assertEqual(glyph != 2, any(p[3] == 0 for p in pixels))
+            self.assertTrue(all(p[3] in (0, 255) and (p[3] == 0 or p[:3] == b'\xff\xff\xff') for p in pixels))
+            self.assertTrue(any(rows[y][(glyph * 16 + 15) * 4 + 3] == 255 for y in range(16)))
+
+    def test_four_light_and_route_indicator_assets(self):
+        groups = [('signals/jr-four-light/resourcepack', 'four_light_signal', ['stop', 'caution', 'slow', 'proceed', 'housing']),
+                  ('signals/route-indicator/resourcepack', 'route_indicator', ['closed'] + list(map(str, range(10))) + ['housing'])]
+        for base, prefix, states in groups:
+            pack = ROOT / base
+            self.assertEqual([75, 0], read_json(pack / 'pack.mcmeta')['pack']['min_format'])
+            models = {}
+            for state in states:
+                wrapper = read_json(pack / f'assets/jr/items/{prefix}_{state}.json')['model']
+                self.assertEqual('minecraft:model', wrapper['type'])
+                namespace, key = wrapper['model'].split(':')
+                model = read_json(pack / f'assets/{namespace}/models/{key}.json')
+                for texture in model['textures'].values():
+                    namespace, key = texture.split(':')
+                    width, height = dimensions(pack / f'assets/{namespace}/textures/{key}.png')
+                    self.assertGreater(width * height, 0)
+                for element in model['elements']:
+                    for key in ('from', 'to'):
+                        self.assertTrue(all(-16 <= v <= 32 for v in element[key]))
+                models[state] = model['elements']
+            if prefix == 'route_indicator':
+                self.assertEqual([], models['closed'])
+                self.assertEqual(10, len({json.dumps(models[str(n)], sort_keys=True) for n in range(10)}))
+                self.assertTrue(all(models[str(n)] for n in range(10)))
+            else:
+                self.assertEqual(29, len(models['housing']))
+                dark = {e['name']: e for e in models['housing'] if e['name'].endswith('pixel lens')}
+                self.assertEqual(4, len(dark))
+                lamps = {'stop': [2], 'caution': [3], 'slow': [1, 4], 'proceed': [4]}
+                for state, ids in lamps.items():
+                    lit = models[state]
+                    self.assertEqual([f'lamp {i} pixel lens' for i in ids], [e['name'] for e in lit])
+                    for e in lit:
+                        self.assertEqual({'north'}, set(e['faces']))
+                        for end in ('from', 'to'):
+                            self.assertEqual(dark[e['name']][end][:2], e[end][:2])
+                            self.assertAlmostEqual(.05, dark[e['name']][end][2] - e[end][2])
+
+if __name__ == '__main__':
+    unittest.main()
