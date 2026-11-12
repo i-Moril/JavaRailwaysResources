@@ -1,0 +1,11 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "javarailways:font/editor_markers.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": ["\ue100\ue101\ue102"]
+    }
+  ]
+}

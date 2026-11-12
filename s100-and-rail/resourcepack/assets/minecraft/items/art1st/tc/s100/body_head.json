@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "minecraft:item/art1st/tc/s100/body_head",
+    "tints": [
+      {"type": "minecraft:constant", "value": 16711679}
+    ]
+  }
+}

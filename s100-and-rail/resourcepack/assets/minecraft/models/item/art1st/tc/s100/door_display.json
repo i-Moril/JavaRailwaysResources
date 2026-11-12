@@ -1,0 +1,29 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [1024, 256],
+	"textures": {
+		"left_lcd": "item/art1st/tc/s100/left_door_display_lcd",
+		"particle": "item/art1st/tc/s100/right_door_display_lcd",
+		"right_lcd": "item/art1st/tc/s100/right_door_display_lcd"
+	},
+	"elements": [
+		{
+			"name": "display",
+			"from": [-11.92388, 21.38268, 0],
+			"to": [-11.92388, 25.38268, 16],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [-12.92388, 20.38268, 2]},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#left_lcd"}
+			}
+		},
+		{
+			"name": "display",
+			"from": [27.92388, 21.38268, 0],
+			"to": [27.92388, 25.38268, 16],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [28.92388, 20.38268, 2]},
+			"faces": {
+				"west": {"uv": [0, 0, 16, 16], "texture": "#right_lcd"}
+			}
+		}
+	]
+}

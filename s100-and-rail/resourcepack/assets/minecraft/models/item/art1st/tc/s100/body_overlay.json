@@ -1,0 +1,36 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "item/art1st/tc/s100/body_overlay",
+		"particle": "item/art1st/tc/s100/body_overlay"
+	},
+	"elements": [
+		{
+			"name": "wall",
+			"from": [-15.01, -16, 6.25],
+			"to": [-15.01, 25, 19.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-15, 0, 5.25]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 10.25], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 10.25], "texture": "#0"},
+				"west": {"uv": [3.25, 0, 0, 10.25], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 3.25], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 3.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "wall",
+			"from": [31.01, -16, 6.25],
+			"to": [31.01, 25, 19.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [31, 0, 5.25]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 10.25], "texture": "#0"},
+				"east": {"uv": [0, 0, 3.25, 10.25], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 10.25], "texture": "#0"},
+				"up": {"uv": [0, 3.25, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 3.25], "texture": "#0"}
+			}
+		}
+	]
+}

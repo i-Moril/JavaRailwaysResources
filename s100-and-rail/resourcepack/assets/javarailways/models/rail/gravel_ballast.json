@@ -1,0 +1,32 @@
+{
+  "ambientocclusion": true,
+  "textures": {
+    "ballast": "minecraft:block/gravel",
+    "particle": "minecraft:block/gravel"
+  },
+  "elements": [
+    {
+      "from": [-8, 8, -16],
+      "to": [8, 24, 0],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#ballast"},
+        "up": {"uv": [0, 0, 16, 16], "texture": "#ballast"}
+      }
+    },
+    {
+      "from": [-8, 8, 0],
+      "to": [8, 24, 16],
+      "faces": {
+        "up": {"uv": [0, 0, 16, 16], "texture": "#ballast"}
+      }
+    },
+    {
+      "from": [-8, 8, 16],
+      "to": [8, 24, 32],
+      "faces": {
+        "south": {"uv": [0, 0, 16, 16], "texture": "#ballast"},
+        "up": {"uv": [0, 0, 16, 16], "texture": "#ballast"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "minecraft:item/iron_nugget"
+	},
+	"overrides": [
+		{"predicate": {"custom_model_data":10000}, "model": "item/art1st/tc/s100/body_seated"},
+		{"predicate": {"custom_model_data":10001}, "model": "item/art1st/tc/s100/body_connector_toilet"},
+		{"predicate": {"custom_model_data":10002}, "model": "item/art1st/tc/s100/body_head"},
+		{"predicate": {"custom_model_data":10003}, "model": "item/art1st/tc/s100/body_connector"},
+		{"predicate": {"custom_model_data":10010}, "model": "item/art1st/tc/s100/door_a"},
+		{"predicate": {"custom_model_data":10011}, "model": "item/art1st/tc/s100/door_b"},
+		{"predicate": {"custom_model_data":10012}, "model": "item/art1st/tc/s100/door_cab_a"},
+		{"predicate": {"custom_model_data":10013}, "model": "item/art1st/tc/s100/door_cab_b"},
+		{"predicate": {"custom_model_data":10014}, "model": "item/art1st/tc/s100/left_door_light"},
+		{"predicate": {"custom_model_data":10015}, "model": "item/art1st/tc/s100/left_door_light_warning"},
+		{"predicate": {"custom_model_data":10020}, "model": "item/art1st/tc/s100/wheel"},
+		{"predicate": {"custom_model_data":10021}, "model": "item/art1st/tc/s100/bogie"},
+		{"predicate": {"custom_model_data":10022}, "model": "item/art1st/tc/s100/connector_front"},
+		{"predicate": {"custom_model_data":10023}, "model": "item/art1st/tc/s100/connector_mid_a"},
+		{"predicate": {"custom_model_data":10024}, "model": "item/art1st/tc/s100/bottom_devices_a"},
+		{"predicate": {"custom_model_data":10025}, "model": "item/art1st/tc/s100/bottom_devices_b"},
+		{"predicate": {"custom_model_data":10026}, "model": "item/art1st/tc/s100/bottom_devices_c"},
+		{"predicate": {"custom_model_data":10030}, "model": "item/art1st/tc/s100/air_conditioner"},
+		{"predicate": {"custom_model_data":10031}, "model": "item/art1st/tc/s100/pantograph"},
+		{"predicate": {"custom_model_data":10032}, "model": "item/art1st/tc/s100/pantograph_retrieved"},
+		{"predicate": {"custom_model_data":10040}, "model": "item/art1st/tc/s100/body_head_overlay"},
+		{"predicate": {"custom_model_data":10041}, "model": "item/art1st/tc/s100/body_overlay"},
+		{"predicate": {"custom_model_data":10050}, "model": "item/art1st/tc/s100/cabin_light"},
+		{"predicate": {"custom_model_data":10051}, "model": "item/art1st/tc/s100/head_light"},
+		{"predicate": {"custom_model_data":10052}, "model": "item/art1st/tc/s100/tail_light"},
+		{"predicate": {"custom_model_data":10053}, "model": "item/art1st/tc/s100/cabin_light_head"},
+		{"predicate": {"custom_model_data":10054}, "model": "item/art1st/tc/s100/cabin_light_connector"},
+		{"predicate": {"custom_model_data":10055}, "model": "item/art1st/tc/s100/cabin_light_connector_toilet"},
+		{"predicate": {"custom_model_data":10060}, "model": "item/art1st/tc/s100/front_display"},
+		{"predicate": {"custom_model_data":10061}, "model": "item/art1st/tc/s100/side_display"},
+		{"predicate": {"custom_model_data":10062}, "model": "item/art1st/tc/s100/door_display"}
+	]
+}

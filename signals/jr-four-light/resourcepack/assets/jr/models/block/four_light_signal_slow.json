@@ -1,0 +1,9 @@
+{
+  "credit": "JR four-light signal head, reference-based voxel model",
+  "textures": {"signal":"jr:block/four_light_signal","particle":"jr:block/four_light_signal"},
+  "elements": [
+    {"name":"lamp 1 pixel lens","from":[4,14,6.95],"to":[12,22,7.95],"faces":{"north":{"uv":[8,0,12,8],"texture":"#signal"}}},
+    {"name":"lamp 4 pixel lens","from":[4,-12,6.95],"to":[12,-4,7.95],"faces":{"north":{"uv":[12,0,16,8],"texture":"#signal"}}}
+  ],
+  "display": {"gui":{"rotation":[20,145,0],"translation":[0,-7,0],"scale":[0.5,0.5,0.5]}}
+}

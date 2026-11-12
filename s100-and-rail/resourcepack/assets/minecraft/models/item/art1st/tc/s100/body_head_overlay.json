@@ -1,0 +1,108 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "item/art1st/tc/s100/body_head_overlay",
+		"1": "item/art1st/tc/s100/body_head_side_overlay",
+		"particle": "item/art1st/tc/s100/body_head_overlay"
+	},
+	"elements": [
+		{
+			"name": "cab_wall",
+			"from": [29, -16, -11.02],
+			"to": [31.01, 25.01, -9.02],
+			"rotation": {"angle": 0, "axis": "y", "origin": [17, 0, -11]},
+			"faces": {
+				"north": {"uv": [0, 5.5, 0.5025, 15.7525], "texture": "#0"},
+				"east": {"uv": [0.5, 5.4975, 1, 15.75], "texture": "#0"}
+			}
+		},
+		{
+			"name": "wall",
+			"from": [31.01, -16, 7],
+			"to": [31.01, 25, 20],
+			"rotation": {"angle": 0, "axis": "y", "origin": [31, 0, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 10.25], "texture": "#1"},
+				"east": {"uv": [0, 0, 3.25, 10.25], "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 10.25], "texture": "#1"},
+				"up": {"uv": [0, 3.25, 0, 0], "texture": "#1"},
+				"down": {"uv": [0, 0, 0, 3.25], "texture": "#1"}
+			}
+		},
+		{
+			"name": "wall",
+			"from": [-15.01, -16, 7],
+			"to": [-15.01, 25, 20],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-15, 0, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 10.25], "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 10.25], "texture": "#1"},
+				"west": {"uv": [3.25, 0, 0, 10.25], "texture": "#1"},
+				"up": {"uv": [0, 0, 0, 3.25], "texture": "#1"},
+				"down": {"uv": [0, 0, 0, 3.25], "texture": "#1"}
+			}
+		},
+		{
+			"name": "head_bottom",
+			"from": [-13, -16, -11.01],
+			"to": [29, 6.01, -11.01],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, -11]},
+			"faces": {
+				"north": {"uv": [0, 0, 10.5, 5.5025], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 1.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 1.5], "texture": "#0"},
+				"up": {"uv": [10.5, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [10.5, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cab_wall",
+			"from": [-15.01, -16, -11.02],
+			"to": [-13, 25.01, -9.02],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 0, -11]},
+			"faces": {
+				"north": {"uv": [2, 5.4975, 2.5025, 15.75], "texture": "#0"},
+				"west": {"uv": [3.5, 5.4975, 4, 15.75], "texture": "#0"}
+			}
+		},
+		{
+			"name": "head_display_top",
+			"from": [-12.91, 25.1, -11.02],
+			"to": [28.91, 27.11, -9.02],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.01, 24.09, -11.801]},
+			"faces": {
+				"north": {"uv": [4, 7.25, 14.5, 7.75], "texture": "#0"},
+				"up": {"uv": [4, 7.75, 14.5, 8.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "roof",
+			"from": [29.00293, 25.0029, -11.01],
+			"to": [31.01293, 27.97275, -9.01],
+			"rotation": {"angle": 45, "axis": "z", "origin": [31.00293, 24.99293, -0.01]},
+			"faces": {
+				"north": {"uv": [8, 9.25, 8.5, 10], "texture": "#0"},
+				"east": {"uv": [8.5, 9.25, 9, 10], "texture": "#0", "tintindex": 0}
+			}
+		},
+		{
+			"name": "roof",
+			"from": [-15.01293, 25.0029, -11.01],
+			"to": [-13.00293, 27.97275, -9.01],
+			"rotation": {"angle": -45, "axis": "z", "origin": [-15.00293, 24.99293, -0.01]},
+			"faces": {
+				"north": {"uv": [8, 10, 8.5, 10.75], "texture": "#0"},
+				"west": {"uv": [9, 9.25, 9.5, 10], "texture": "#0", "tintindex": 0}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "overlay_front",
+			"origin": [-15, 25, 0],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7]
+		}
+	]
+}
