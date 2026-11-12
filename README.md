@@ -14,7 +14,3 @@
 
 运行 `node editor-markers/generate-texture.mjs` 重新生成标记纹理；运行 `python3 editor-markers/build_pack.py` 构建可复现的编辑器资源包。
 运行 `python3 s100-and-rail/build_s100_transparency_pack.py --help` 查看 S100 资源包构建参数；默认输出会覆盖同目录中的两个分发 ZIP，请按需通过参数指定其他输出。
-
-## 检查
-
-运行 `python3 -m unittest discover -s tests -v` 检查信号资源引用、模型坐标和编辑器字体纹理。检查不代表实际客户端画面验收。
