@@ -1,0 +1,22 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "javarailways:display/ring.png",
+      "height": 9,
+      "ascent": 7,
+      "chars": [
+        "\ue004"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "javarailways:display/dot.png",
+      "height": 9,
+      "ascent": 7,
+      "chars": [
+        "\ue005"
+      ]
+    }
+  ]
+}

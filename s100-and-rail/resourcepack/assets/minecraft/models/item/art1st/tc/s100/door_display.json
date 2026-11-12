@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [1024, 256],
 	"textures": {
-		"left_lcd": "item/art1st/tc/s100/left_door_display_lcd",
-		"particle": "item/art1st/tc/s100/right_door_display_lcd",
-		"right_lcd": "item/art1st/tc/s100/right_door_display_lcd"
+		"left_lcd": "item/art1st/tc/s100/display_background",
+		"particle": "item/art1st/tc/s100/display_background",
+		"right_lcd": "item/art1st/tc/s100/display_background"
 	},
 	"elements": [
 		{
