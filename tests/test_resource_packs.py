@@ -14,7 +14,24 @@ def read_json(path):
 def dimensions(path):
     data = path.read_bytes()
     assert data[:8] == b'\x89PNG\r\n\x1a\n'
-    return struct.unpack('>II', data[16:24])
+    offset = 8
+    payload = []
+    header = None
+    while offset < len(data):
+        size = struct.unpack_from('>I', data, offset)[0]
+        kind = data[offset + 4:offset + 8]
+        chunk = data[offset + 8:offset + 8 + size]
+        assert zlib.crc32(kind + chunk) == struct.unpack_from('>I', data, offset + 8 + size)[0]
+        if kind == b'IHDR': header = struct.unpack('>IIBBBBB', chunk)
+        if kind == b'IDAT': payload.append(chunk)
+        offset += 12 + size
+    width, height, depth, color, compression, filter_method, interlace = header
+    assert (depth, color, compression, filter_method, interlace) == (8, 2, 0, 0, 0)
+    raw = zlib.decompress(b''.join(payload))
+    stride = width * 3 + 1
+    assert len(raw) == stride * height
+    assert all(raw[y * stride] in range(5) for y in range(height))
+    return width, height
 
 
 class ResourcePackTest(unittest.TestCase):
@@ -64,6 +81,10 @@ class ResourcePackTest(unittest.TestCase):
                 self.assertEqual('minecraft:model', wrapper['type'])
                 namespace, key = wrapper['model'].split(':')
                 model = read_json(pack / f'assets/{namespace}/models/{key}.json')
+                for element in model['elements']:
+                    for face in element['faces'].values():
+                        reference = face['texture']
+                        self.assertTrue(reference.startswith('#') and reference[1:] in model['textures'])
                 for texture in model['textures'].values():
                     namespace, key = texture.split(':')
                     width, height = dimensions(pack / f'assets/{namespace}/textures/{key}.png')
