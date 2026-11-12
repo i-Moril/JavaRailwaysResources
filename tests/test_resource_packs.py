@@ -73,6 +73,9 @@ class ResourcePackTest(unittest.TestCase):
                         self.assertTrue(all(-16 <= v <= 32 for v in element[key]))
                 models[state] = model['elements']
             if prefix == 'route_indicator':
+                pixel = next(e for e in models['2'] if e['name'] == 'pixel_1_0')
+                self.assertEqual(10.8, pixel['from'][0])
+                self.assertEqual({'north'}, set(pixel['faces']))
                 self.assertEqual([], models['closed'])
                 self.assertEqual(10, len({json.dumps(models[str(n)], sort_keys=True) for n in range(10)}))
                 self.assertTrue(all(models[str(n)] for n in range(10)))
@@ -81,10 +84,15 @@ class ResourcePackTest(unittest.TestCase):
                 dark = {e['name']: e for e in models['housing'] if e['name'].endswith('pixel lens')}
                 self.assertEqual(4, len(dark))
                 lamps = {'stop': [2], 'caution': [3], 'slow': [1, 4], 'proceed': [4]}
+                uv = {'stop': [4.0], 'caution': [8.0], 'slow': [8.0, 12.0], 'proceed': [12.0]}
+                lower = {1: 14.0, 2: 5.0, 3: -3.0, 4: -12.0}
                 for state, ids in lamps.items():
                     lit = models[state]
                     self.assertEqual([f'lamp {i} pixel lens' for i in ids], [e['name'] for e in lit])
-                    for e in lit:
+                    for index, e in enumerate(lit):
+                        self.assertEqual(lower[ids[index]], e['from'][1])
+                        u = uv[state][index]
+                        self.assertEqual([u, 0.0, u + 4.0, 8.0], e['faces']['north']['uv'])
                         self.assertEqual({'north'}, set(e['faces']))
                         for end in ('from', 'to'):
                             self.assertEqual(dark[e['name']][end][:2], e[end][:2])
