@@ -15,3 +15,5 @@
 运行 `node editor-markers/generate-texture.mjs` 重新生成标记纹理；运行 `python3 editor-markers/build_pack.py` 构建可复现的编辑器资源包。
 运行 `python3 s100-and-rail/build_s100_transparency_pack.py --help` 查看 S100 资源包构建参数；默认输出会覆盖同目录中的两个分发 ZIP，请按需通过参数指定其他输出。
 运行 `python3 s100-and-rail/build_display_overlay.py` 生成 S100 显示字体及客户端 overlay，输出至 `s100-and-rail/distributions/`。
+
+显示覆盖包为 `s100-and-rail/distributions/resourcepack-s100-displays-1.21.11-26.2.zip`；在客户端将它放在原 S100 资源包上方启用。包含 `javarailways:cabin_text` 中英文字体（Noto Sans CJK SC、Roboto）和 `javarailways:display_geometry` 圈点字形。TTF 字体、字体定义和各自的 OFL 许可证均保存在 `s100-and-rail/resourcepack/assets/javarailways/font/`，上述构建命令会一并打包。

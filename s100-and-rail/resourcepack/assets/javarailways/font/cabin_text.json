@@ -1,0 +1,16 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "javarailways:cabin/roboto.ttf",
+      "size": 9,
+      "oversample": 4
+    },
+    {
+      "type": "ttf",
+      "file": "javarailways:cabin/noto-sans-cjk-sc.ttf",
+      "size": 9,
+      "oversample": 4
+    }
+  ]
+}
