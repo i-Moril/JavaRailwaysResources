@@ -3,7 +3,10 @@
     "type": "minecraft:model",
     "model": "minecraft:item/art1st/tc/s100/body_head_overlay",
     "tints": [
-      {"type": "minecraft:constant", "value": 16711679}
+      {
+        "type": "minecraft:constant",
+        "value": 16711679
+      }
     ]
   }
 }

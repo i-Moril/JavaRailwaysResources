@@ -1,19 +1,25 @@
 # JavaRailways Resources
 
-独立保存 JavaRailways 客户端资源包源码、生成工具和既有分发包。这里的文件从 JavaRailways 工作区整理而来；具体客户端格式以各包 `pack.mcmeta` 为准。服务器模型配置和示例不属于本仓库。
+独立保存 JavaRailways 客户端资源包源码、生成工具和分发包。所有资源包均支持 Minecraft Java Edition 1.21.11（资源格式 75.0）；具体支持范围以各包 `pack.mcmeta` 为准。服务器模型配置和示例不属于本仓库。
 
-- `s100-and-rail/`：S100 资源包源码，当前同时包含轨道模型资源；`distributions/` 保存既有版本及 S100 显示覆盖包。`build_s100_transparency_pack.py` 生成 control 和透明度两个版本。
-- `rail/`：独立轨道客户端资源包及含服务器轨道配置的历史完整交付 ZIP。
-- `signals/jr-four-light/`：四灯客户端资源源码和 26.1.2 分发包；源码声明 1.21.11，ZIP 声明 26.1.2，两者元数据不同。
-- `signals/route-indicator/`：进路表示器客户端资源源码、资源包 ZIP 和含服务器模型的历史完整交付 ZIP。
-- `editor-markers/`：编辑器标记资源源码、纹理生成工具和既有 ZIP。
+- `s100-and-rail/`：S100 资源包源码，当前同时包含轨道模型资源；`distributions/` 保存基础包、control、透明度和 S100 显示覆盖包。`build_s100_transparency_pack.py` 生成 control 和透明度两个版本。
+- `rail/`：独立轨道客户端资源源码、分发包及含服务器轨道配置的完整交付 ZIP。
+- `signals/jr-four-light/`：四灯客户端资源源码和分发包，支持 1.21.11–26.1.2。
+- `signals/route-indicator/`：进路表示器客户端资源源码、资源包 ZIP 和含服务器模型的完整交付 ZIP。
+- `editor-markers/`：编辑器标记资源源码、纹理生成工具和分发 ZIP。
 
-`distributions/` 保留原始文件，不代表所有 ZIP 与当前源码一致：S100 基础 ZIP 的内容与源码有差异，进路表示器完整 ZIP 中的 README 未同步。实际客户端效果和版本兼容性需要各自验证。
+`distributions/` 中的客户端资源从当前源码生成，完整交付 ZIP 内的资源包副本也会同步。已有分发文件名保持不变；名称带 `26.1.2` 的编辑器标记和四灯 ZIP 同样支持 1.21.11。服务器配置在重建时保持原内容。
 
 ## 生成
 
-运行 `node editor-markers/generate-texture.mjs` 重新生成标记纹理；运行 `python3 editor-markers/build_pack.py` 构建可复现的编辑器资源包。
+运行 `python3 build_packs.py` 重建全部资源包和交付 ZIP 内的副本。
+
+运行 `node editor-markers/generate-texture.mjs` 重新生成标记纹理；运行 `python3 editor-markers/build_pack.py` 将可复现的编辑器资源包写入 `editor-markers/distributions/`。
 运行 `python3 s100-and-rail/build_s100_transparency_pack.py --help` 查看 S100 资源包构建参数；默认输出会覆盖同目录中的两个分发 ZIP，请按需通过参数指定其他输出。
 运行 `python3 s100-and-rail/build_display_overlay.py` 生成 S100 显示字体及客户端 overlay，输出至 `s100-and-rail/distributions/`。
 
 显示覆盖包为 `s100-and-rail/distributions/resourcepack-s100-displays-1.21.11-26.2.zip`；在客户端将它放在原 S100 资源包上方启用。包含 `javarailways:cabin_text` 中英文字体（Noto Sans CJK SC、Roboto）和 `javarailways:display_geometry` 圈点字形。TTF 字体、字体定义和各自的 OFL 许可证均保存在 `s100-and-rail/resourcepack/assets/javarailways/font/`，上述构建命令会一并打包。
+
+S100 的铁粒和铁锭 CustomModelData 映射使用 `assets/minecraft/items/` 下的 `minecraft:range_dispatch`，与命名物品入口共用相同模型和 tint。26.2 透明度拆层仅在格式 88 的 overlay 中生效，1.21.11 使用基础模型。
+
+格式依据：[Minecraft Java Edition 1.21.11 官方更新说明](https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-11)。静态构建和引用检查不能代替游戏内的列车、信号、轨道和文字显示验收。

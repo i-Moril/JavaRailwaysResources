@@ -1,0 +1,41 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "entries": [
+      {
+        "threshold": 730001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "javarailways:rail/gravel_ballast"
+        }
+      },
+      {
+        "threshold": 730001.5,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/paper"
+        }
+      },
+      {
+        "threshold": 730002,
+        "model": {
+          "type": "minecraft:model",
+          "model": "javarailways:rail/stone_ballast"
+        }
+      },
+      {
+        "threshold": 730002.5,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/paper"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/paper"
+    }
+  }
+}

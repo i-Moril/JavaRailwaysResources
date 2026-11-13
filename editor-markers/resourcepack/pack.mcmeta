@@ -1,7 +1,13 @@
 {
   "pack": {
-    "description": "JavaRailways railway editor markers (26.1.2)",
-    "min_format": [84, 0],
-    "max_format": [84, 0]
+    "description": "JavaRailways railway editor markers (Minecraft 1.21.11-26.1.2)",
+    "min_format": [
+      75,
+      0
+    ],
+    "max_format": [
+      84,
+      0
+    ]
   }
 }

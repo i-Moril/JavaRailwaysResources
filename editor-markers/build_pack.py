@@ -5,7 +5,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / 'resourcepack'
-OUTPUT = ROOT / 'build/JavaRailways-editor-markers-26.1.2.zip'
+OUTPUT = ROOT / 'distributions/JavaRailways-editor-markers-26.1.2.zip'
 
 
 def main():

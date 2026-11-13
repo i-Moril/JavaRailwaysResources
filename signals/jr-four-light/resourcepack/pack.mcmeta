@@ -1,7 +1,13 @@
 {
   "pack": {
-    "description": "SimpleSignals JR four-light head demo (Minecraft 1.21.11)",
-    "min_format": [75, 0],
-    "max_format": [75, 0]
+    "description": "SimpleSignals JR four-light head demo (Minecraft 1.21.11-26.1.2)",
+    "min_format": [
+      75,
+      0
+    ],
+    "max_format": [
+      84,
+      0
+    ]
   }
 }

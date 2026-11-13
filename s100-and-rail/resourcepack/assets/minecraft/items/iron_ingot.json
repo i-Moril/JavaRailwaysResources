@@ -1,0 +1,783 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "entries": [
+      {
+        "threshold": 10000,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10000"
+        }
+      },
+      {
+        "threshold": 10001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10001"
+        }
+      },
+      {
+        "threshold": 10002,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10002"
+        }
+      },
+      {
+        "threshold": 10003,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10003"
+        }
+      },
+      {
+        "threshold": 10004,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10004"
+        }
+      },
+      {
+        "threshold": 10005,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10005"
+        }
+      },
+      {
+        "threshold": 10006,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10006"
+        }
+      },
+      {
+        "threshold": 10007,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10007"
+        }
+      },
+      {
+        "threshold": 10008,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10008"
+        }
+      },
+      {
+        "threshold": 10009,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10009"
+        }
+      },
+      {
+        "threshold": 10010,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10010"
+        }
+      },
+      {
+        "threshold": 10011,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10011"
+        }
+      },
+      {
+        "threshold": 10012,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10012"
+        }
+      },
+      {
+        "threshold": 10013,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10013"
+        }
+      },
+      {
+        "threshold": 10014,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/front/10014"
+        }
+      },
+      {
+        "threshold": 10015,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/side/10015"
+        }
+      },
+      {
+        "threshold": 10016,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10016"
+        }
+      },
+      {
+        "threshold": 10017,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10017"
+        }
+      },
+      {
+        "threshold": 10018,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10018"
+        }
+      },
+      {
+        "threshold": 10019,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10019"
+        }
+      },
+      {
+        "threshold": 10020,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10020"
+        }
+      },
+      {
+        "threshold": 10021,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10021"
+        }
+      },
+      {
+        "threshold": 10022,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10022"
+        }
+      },
+      {
+        "threshold": 10023,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10023"
+        }
+      },
+      {
+        "threshold": 10024,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10024"
+        }
+      },
+      {
+        "threshold": 10025,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10025"
+        }
+      },
+      {
+        "threshold": 10026,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/front/10026"
+        }
+      },
+      {
+        "threshold": 10027,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/side/10027"
+        }
+      },
+      {
+        "threshold": 10028,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10028"
+        }
+      },
+      {
+        "threshold": 10029,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10029"
+        }
+      },
+      {
+        "threshold": 10030,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10030"
+        }
+      },
+      {
+        "threshold": 10031,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10031"
+        }
+      },
+      {
+        "threshold": 10032,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10032"
+        }
+      },
+      {
+        "threshold": 10033,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10033"
+        }
+      },
+      {
+        "threshold": 10034,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10034"
+        }
+      },
+      {
+        "threshold": 10035,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10035"
+        }
+      },
+      {
+        "threshold": 10036,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10036"
+        }
+      },
+      {
+        "threshold": 10037,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10037"
+        }
+      },
+      {
+        "threshold": 10038,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10038"
+        }
+      },
+      {
+        "threshold": 10039,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10039"
+        }
+      },
+      {
+        "threshold": 10040,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/front/10040"
+        }
+      },
+      {
+        "threshold": 10041,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/side/10041"
+        }
+      },
+      {
+        "threshold": 10042,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10042"
+        }
+      },
+      {
+        "threshold": 10043,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10043"
+        }
+      },
+      {
+        "threshold": 10044,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10044"
+        }
+      },
+      {
+        "threshold": 10045,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10045"
+        }
+      },
+      {
+        "threshold": 10046,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10046"
+        }
+      },
+      {
+        "threshold": 10047,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10047"
+        }
+      },
+      {
+        "threshold": 10048,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10048"
+        }
+      },
+      {
+        "threshold": 10049,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10049"
+        }
+      },
+      {
+        "threshold": 10050,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10050"
+        }
+      },
+      {
+        "threshold": 10051,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10051"
+        }
+      },
+      {
+        "threshold": 10052,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10052"
+        }
+      },
+      {
+        "threshold": 10053,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10053"
+        }
+      },
+      {
+        "threshold": 10054,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10054"
+        }
+      },
+      {
+        "threshold": 10055,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10055"
+        }
+      },
+      {
+        "threshold": 10056,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10056"
+        }
+      },
+      {
+        "threshold": 10057,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/front/10057"
+        }
+      },
+      {
+        "threshold": 10058,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/side/10058"
+        }
+      },
+      {
+        "threshold": 10059,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10059"
+        }
+      },
+      {
+        "threshold": 10060,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10060"
+        }
+      },
+      {
+        "threshold": 10061,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10061"
+        }
+      },
+      {
+        "threshold": 10062,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10062"
+        }
+      },
+      {
+        "threshold": 10063,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10063"
+        }
+      },
+      {
+        "threshold": 10064,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10064"
+        }
+      },
+      {
+        "threshold": 10065,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10065"
+        }
+      },
+      {
+        "threshold": 10066,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10066"
+        }
+      },
+      {
+        "threshold": 10067,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10067"
+        }
+      },
+      {
+        "threshold": 10068,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10068"
+        }
+      },
+      {
+        "threshold": 10069,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10069"
+        }
+      },
+      {
+        "threshold": 10070,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/front/10070"
+        }
+      },
+      {
+        "threshold": 10071,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/side/10071"
+        }
+      },
+      {
+        "threshold": 10072,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10072"
+        }
+      },
+      {
+        "threshold": 10073,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10073"
+        }
+      },
+      {
+        "threshold": 10074,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10074"
+        }
+      },
+      {
+        "threshold": 10075,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10075"
+        }
+      },
+      {
+        "threshold": 10076,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10076"
+        }
+      },
+      {
+        "threshold": 10077,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10077"
+        }
+      },
+      {
+        "threshold": 10078,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10078"
+        }
+      },
+      {
+        "threshold": 10079,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10079"
+        }
+      },
+      {
+        "threshold": 10080,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10080"
+        }
+      },
+      {
+        "threshold": 10081,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10081"
+        }
+      },
+      {
+        "threshold": 10082,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10082"
+        }
+      },
+      {
+        "threshold": 10083,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10083"
+        }
+      },
+      {
+        "threshold": 10084,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/front/10084"
+        }
+      },
+      {
+        "threshold": 10085,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/side/10085"
+        }
+      },
+      {
+        "threshold": 10086,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10086"
+        }
+      },
+      {
+        "threshold": 10087,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10087"
+        }
+      },
+      {
+        "threshold": 10088,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10088"
+        }
+      },
+      {
+        "threshold": 10089,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10089"
+        }
+      },
+      {
+        "threshold": 10090,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10090"
+        }
+      },
+      {
+        "threshold": 10091,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10091"
+        }
+      },
+      {
+        "threshold": 10092,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10092"
+        }
+      },
+      {
+        "threshold": 10093,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10093"
+        }
+      },
+      {
+        "threshold": 10094,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10094"
+        }
+      },
+      {
+        "threshold": 10095,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10095"
+        }
+      },
+      {
+        "threshold": 10096,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/front/10096"
+        }
+      },
+      {
+        "threshold": 10097,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/side/10097"
+        }
+      },
+      {
+        "threshold": 10098,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10098"
+        }
+      },
+      {
+        "threshold": 10099,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10099"
+        }
+      },
+      {
+        "threshold": 10100,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10100"
+        }
+      },
+      {
+        "threshold": 10101,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10101"
+        }
+      },
+      {
+        "threshold": 10102,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10102"
+        }
+      },
+      {
+        "threshold": 10103,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10103"
+        }
+      },
+      {
+        "threshold": 10104,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10104"
+        }
+      },
+      {
+        "threshold": 10105,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10105"
+        }
+      },
+      {
+        "threshold": 10106,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10106"
+        }
+      },
+      {
+        "threshold": 10107,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/lcd/10107"
+        }
+      },
+      {
+        "threshold": 10108,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/front/10108"
+        }
+      },
+      {
+        "threshold": 10109,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/display/side/10109"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/iron_ingot"
+    }
+  }
+}

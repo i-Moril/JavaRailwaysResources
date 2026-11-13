@@ -1,0 +1,260 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "entries": [
+      {
+        "threshold": 10000,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/body_seated",
+          "tints": [
+            {
+              "type": "minecraft:constant",
+              "value": 16711679
+            }
+          ]
+        }
+      },
+      {
+        "threshold": 10001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/body_connector_toilet",
+          "tints": [
+            {
+              "type": "minecraft:constant",
+              "value": 16711679
+            }
+          ]
+        }
+      },
+      {
+        "threshold": 10002,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/body_head",
+          "tints": [
+            {
+              "type": "minecraft:constant",
+              "value": 16711679
+            }
+          ]
+        }
+      },
+      {
+        "threshold": 10003,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/body_connector",
+          "tints": [
+            {
+              "type": "minecraft:constant",
+              "value": 16711679
+            }
+          ]
+        }
+      },
+      {
+        "threshold": 10010,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/door_a"
+        }
+      },
+      {
+        "threshold": 10011,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/door_b"
+        }
+      },
+      {
+        "threshold": 10012,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/door_cab_a"
+        }
+      },
+      {
+        "threshold": 10013,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/door_cab_b"
+        }
+      },
+      {
+        "threshold": 10014,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/left_door_light"
+        }
+      },
+      {
+        "threshold": 10015,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/left_door_light_warning"
+        }
+      },
+      {
+        "threshold": 10020,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/wheel"
+        }
+      },
+      {
+        "threshold": 10021,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/bogie"
+        }
+      },
+      {
+        "threshold": 10022,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/connector_front"
+        }
+      },
+      {
+        "threshold": 10023,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/connector_mid_a"
+        }
+      },
+      {
+        "threshold": 10024,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/bottom_devices_a"
+        }
+      },
+      {
+        "threshold": 10025,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/bottom_devices_b"
+        }
+      },
+      {
+        "threshold": 10026,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/bottom_devices_c"
+        }
+      },
+      {
+        "threshold": 10030,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/air_conditioner"
+        }
+      },
+      {
+        "threshold": 10031,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/pantograph"
+        }
+      },
+      {
+        "threshold": 10032,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/pantograph_retrieved"
+        }
+      },
+      {
+        "threshold": 10040,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/body_head_overlay",
+          "tints": [
+            {
+              "type": "minecraft:constant",
+              "value": 16711679
+            }
+          ]
+        }
+      },
+      {
+        "threshold": 10041,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/body_overlay"
+        }
+      },
+      {
+        "threshold": 10050,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/cabin_light"
+        }
+      },
+      {
+        "threshold": 10051,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/head_light"
+        }
+      },
+      {
+        "threshold": 10052,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/tail_light"
+        }
+      },
+      {
+        "threshold": 10053,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/cabin_light_head"
+        }
+      },
+      {
+        "threshold": 10054,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/cabin_light_connector"
+        }
+      },
+      {
+        "threshold": 10055,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/cabin_light_connector_toilet"
+        }
+      },
+      {
+        "threshold": 10060,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/front_display"
+        }
+      },
+      {
+        "threshold": 10061,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/side_display"
+        }
+      },
+      {
+        "threshold": 10062,
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/art1st/tc/s100/door_display"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/iron_nugget"
+    }
+  }
+}
