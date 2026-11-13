@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build S100 resource packs with a Minecraft 26.2-only transparency overlay.
+"""Build S100 resource packs with Minecraft 26.2-only shader/transparency overlays.
 
 The base assets stay byte-for-byte compatible with Minecraft 1.21.11. The optimized
 pack adds a pack-format 88 overlay that splits mixed solid/translucent item models
@@ -31,6 +31,7 @@ MODEL_DIR = PurePosixPath("assets/minecraft/models/item/art1st/tc/s100")
 ITEM_DIR = PurePosixPath("assets/minecraft/items/art1st/tc/s100")
 TEXTURE_DIR = PurePosixPath("assets/minecraft/textures")
 OVERLAY_DIR = PurePosixPath("overlay_26_2")
+ITEM_SHADER = PurePosixPath("assets/minecraft/shaders/core/item.vsh")
 
 TARGET_MODELS = {
     "body_connector": "glass",
@@ -312,16 +313,14 @@ def write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def pack_metadata(optimized: bool) -> dict[str, Any]:
+def pack_metadata() -> dict[str, Any]:
     metadata: dict[str, Any] = {
         "pack": {
             "min_format": 75,
             "max_format": 88,
             "description": "Series 100 train pack (Minecraft 1.21.11-26.2)",
-        }
-    }
-    if optimized:
-        metadata["overlays"] = {
+        },
+        "overlays": {
             "entries": [
                 {
                     "directory": str(OVERLAY_DIR),
@@ -329,7 +328,8 @@ def pack_metadata(optimized: bool) -> dict[str, Any]:
                     "max_format": 88,
                 }
             ]
-        }
+        },
+    }
     return metadata
 
 
@@ -356,7 +356,7 @@ def composite_item(name: str, translucent_suffix: str) -> dict[str, Any]:
 
 def prepare_stage(source: Path, stage: Path, optimized: bool) -> dict[str, int]:
     shutil.copytree(source, stage, dirs_exist_ok=True)
-    write_json(stage / "pack.mcmeta", pack_metadata(optimized))
+    write_json(stage / "pack.mcmeta", pack_metadata())
 
     analyzer = TransparencyAnalyzer(source)
     base_quads = base_translucent = base_mixed = 0
@@ -427,7 +427,7 @@ def validate_stats(stats: dict[str, int]) -> None:
 
 def validate_overlay(stage: Path, analyzer: TransparencyAnalyzer, splits: dict[str, ModelSplit]) -> None:
     overlay = stage / OVERLAY_DIR
-    expected_files: set[PurePosixPath] = set()
+    expected_files: set[PurePosixPath] = {ITEM_SHADER}
     for name, suffix in TARGET_MODELS.items():
         expected_files.update(
             {
@@ -478,11 +478,18 @@ def validate_zip(path: Path, optimized: bool) -> None:
             raise ValueError(f"duplicate ZIP entries in {path}")
         if "pack.mcmeta" not in names or not any(name.startswith("assets/") for name in names):
             raise ValueError(f"invalid resource-pack root in {path}")
-        has_overlay = any(name.startswith(f"{OVERLAY_DIR}/") for name in names)
-        if has_overlay != optimized:
-            raise ValueError(f"unexpected overlay presence in {path}: {has_overlay}")
+        # 1.21.11 preprocesses every base shader, even ones unused by its pipelines.
+        # item.vsh imports sample_lightmap.glsl, which only exists in newer clients.
+        if str(ITEM_SHADER) in names:
+            raise ValueError(f"26.2 item shader must be version-gated in {path}")
+        overlay_shader = f"{OVERLAY_DIR}/{ITEM_SHADER}"
+        if overlay_shader not in names:
+            raise ValueError(f"missing 26.2 item shader in {path}")
+        overlay_files = {name for name in names if name.startswith(f"{OVERLAY_DIR}/")}
+        if not optimized and overlay_files != {overlay_shader}:
+            raise ValueError(f"control pack must only overlay the item shader in {path}")
         metadata = json.loads(archive.read("pack.mcmeta"))
-        if metadata != pack_metadata(optimized):
+        if metadata != pack_metadata():
             raise ValueError(f"unexpected pack.mcmeta in {path}")
         bad_json: list[str] = []
         for name in names:

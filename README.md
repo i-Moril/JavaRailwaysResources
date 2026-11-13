@@ -26,4 +26,6 @@
 
 S100 的铁粒和铁锭 CustomModelData 映射使用 `assets/minecraft/items/` 下的 `minecraft:range_dispatch`，与命名物品入口共用相同模型和 tint。26.2 透明度拆层仅在格式 88 的 overlay 中生效，1.21.11 使用基础模型。
 
+26.2 的 `item.vsh` 也只放在格式 88 的 overlay 中，包括 control 和基础包。它导入的 `sample_lightmap.glsl` 在 1.21.11 中不存在；1.21.11 的 ShaderManager 会预处理所有根着色器，即使管线不使用该文件，缺失 import 仍会触发空指针并导致整个资源包重载失败。模型和字体 JSON 解析通过不能代替这一步加载检查。
+
 格式依据：[Minecraft Java Edition 1.21.11 官方更新说明](https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-11)。静态构建和引用检查不能代替游戏内的列车、信号、轨道和文字显示验收。
