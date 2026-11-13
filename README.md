@@ -14,6 +14,10 @@
 
 运行 `python3 build_packs.py` 重建全部资源包和交付 ZIP 内的副本。
 
+服务器统一下发包为 `distributions/javarailways.zip`，合并 S100 透明度包（已含轨道、显示字体）、四灯、进路表示器和编辑器标记。保留 S100 的版本元数据及 overlay；其他包只加入资源文件，不覆盖根 `pack.mcmeta`。同路径存在不同内容时构建失败，避免静默丢失资源。
+
+测试服 RoseResourcepack 只配置 `joinPacks: [main]`，将这个合包作为 `main` 下发，下载地址为 `http://mc.art1st.work:29090/main.zip`。已核实 RoseResourcepack 3.5.0 的多包分支连续调用 `Player.setResourcePack`；当前 Folia 的实现会在每次调用时移除之前的服务器包，因此不能把四个独立包直接列入 `joinPacks`。统一下发修复不改变车包的 `item-model` 约定。
+
 运行 `node editor-markers/generate-texture.mjs` 重新生成标记纹理；运行 `python3 editor-markers/build_pack.py` 将可复现的编辑器资源包写入 `editor-markers/distributions/`。
 运行 `python3 s100-and-rail/build_s100_transparency_pack.py --help` 查看 S100 资源包构建参数；默认输出会覆盖同目录中的两个分发 ZIP，请按需通过参数指定其他输出。
 运行 `python3 s100-and-rail/build_display_overlay.py` 生成 S100 显示字体及客户端 overlay，输出至 `s100-and-rail/distributions/`。

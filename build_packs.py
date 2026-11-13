@@ -2,6 +2,7 @@
 """Rebuild every client resource pack, including packs inside delivery bundles."""
 
 from pathlib import Path
+import json
 import sys
 from zipfile import ZipFile
 
@@ -23,6 +24,33 @@ def update_bundle(path, prefix, entries):
     displays.archive(path, bundle)
 
 
+def build_combined_pack():
+    entries = {}
+    sources = (
+        's100-and-rail/distributions/resourcepack-s100-transparency-1.21.11-26.2.zip',
+        'signals/jr-four-light/distributions/jr-four-light-26.1.2.zip',
+        'signals/route-indicator/distributions/jr-route-indicator-resourcepack.zip',
+        'editor-markers/distributions/JavaRailways-editor-markers-26.1.2.zip',
+    )
+    for index, source in enumerate(sources):
+        with ZipFile(ROOT / source) as archive:
+            for name in archive.namelist():
+                if name.endswith('/') or (name == 'pack.mcmeta' and index != 0):
+                    continue
+                data = archive.read(name)
+                if name in entries and entries[name] != data:
+                    raise ValueError(f'Conflicting resource in {source}: {name}')
+                entries[name] = data
+    # Keep S100's version-specific transparency overlay and every asset unchanged.
+    metadata = json.loads(entries['pack.mcmeta'])
+    metadata['pack']['description'] = 'JavaRailways test resources: S100, signals and editor markers'
+    entries['pack.mcmeta'] = (json.dumps(metadata, indent=2) + '\n').encode()
+    destination = ROOT / 'distributions/javarailways.zip'
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    displays.archive(destination, entries)
+    return destination
+
+
 def main():
     glyphs.main()
     s100.deterministic_zip(s100.DEFAULT_SOURCE, ROOT / 's100-and-rail/distributions/resourcepack.zip')
@@ -42,6 +70,7 @@ def main():
                   {nested: (ROOT / 'rail/distributions/resourcepack.zip').read_bytes()})
     update_bundle(ROOT / 'signals/route-indicator/distributions/jr-route-indicator.zip',
                   'resourcepack/', displays.tree(ROOT / 'signals/route-indicator/resourcepack', 'resourcepack/'))
+    build_combined_pack()
     print('Rebuilt all resource packs and bundled copies.')
 
 
